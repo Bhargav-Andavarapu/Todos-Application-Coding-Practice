@@ -1,0 +1,40 @@
+###
+//API-1 Get Todo
+//Get all todos
+GET http://localhost:3000/todos 
+
+###
+//Scenario-1
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+//Scenario-2
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+//Scenario-3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+//Scenario-4
+GET http://localhost:3000/todos/?search_q=Play
+
+###
+//API-2 Get a todo
+GET http://localhost:3000/todos/3/
+
+###
+//API-3 Add a todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO"
+}
+
+###
+//API-5 Delate a Todo
+DELETE http://localhost:3000/todos/10/
